@@ -1,0 +1,14 @@
+
+@startuml
+
+Client -> Adaptor : findservers
+Client <- Adaptor : serverlist
+Client -> Adaptor : create server
+Client <- Adaptor : serverAdded (id)
+Client -> Adaptor : start server (id)
+Client <- Adaptor : server started
+Client -> Adaptor : stop server (id)
+Client <- Adaptor : server stopped
+Client -> Adaptor : publish
+
+@enduml

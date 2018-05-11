@@ -1,0 +1,25 @@
+@startuml
+node devmachine <<desktop>> {
+  node editor1 <<process>> {
+    package sspclient1 <<editor-extension>> {
+
+    }
+    node sspserver1 <<child-process>> {
+
+    }
+
+    sspclient1 -(0)- sspserver1
+  }
+  node editor2 <<process>> {
+    package sspclient2 <<editor-extension>> {
+
+    }
+    node sspserver2 <<child-process>> {
+
+    }
+
+    sspclient2 -(0)- sspserver2
+  }
+}
+
+@enduml
